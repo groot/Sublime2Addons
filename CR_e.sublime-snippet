@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+public class ${1:EventName} : Event
+{
+	public string ${2:PropertyName};
+	
+	public ${1:EventName}(string id, string ${3:propertyName})
+	{
+		Id = id;
+		${2:PropertyName} = ${3:propertyName};${4}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>e</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

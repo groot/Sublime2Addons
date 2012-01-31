@@ -1,0 +1,48 @@
+<snippet>
+<!-- 	<content><![CDATA[
+[TestClass] public class ${1:TestName}Test : AggregateRootTestFixture<${2:AggregateRoot}>
+{
+	protected override IEnumerable<Event> Given()
+	{
+		return new List<Event> {${3}};
+	}
+
+    protected override void When()
+    {
+        root.Update(new ${4:Command} { Id = "TestId", ${5}});
+    }
+
+    [TestMethod]
+    public void Then${6:Event}()
+    {
+        var @event = GetEvent<${6:Event}>();
+        Assert.IsTrue(@event.${7});
+    }
+}
+]]></content> -->
+<content><![CDATA[
+[TestClass] public class ${1:TestName}Test : AggregateRootTestFixture<Serie>
+{
+	protected override IEnumerable<Event> Given()
+	{
+		return new List<Event> { ${2}};
+	}
+
+    protected override void When()
+    {
+        root.Update(new UpdateSerie { Id = "TestId", ${5}});
+    }
+
+    [TestMethod]
+    public void Then${1:Event}()
+    {
+        var @event = GetEvent<${1:Event}>();
+        Assert.IsTrue(@event.${7});
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.cs</scope>
+</snippet>

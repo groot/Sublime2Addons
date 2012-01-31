@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+[TestMethod]
+public void Then${1:Event}()
+{
+    var @event = GetEvent<${1}>();
+
+    Assert.IsTrue(@event.${2});
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>t</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.cs</scope>
+</snippet>
